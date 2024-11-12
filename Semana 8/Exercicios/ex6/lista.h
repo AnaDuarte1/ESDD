@@ -1,6 +1,6 @@
 #ifndef LISTA_H
 #define LISTA_H
-
+#endif
 #define MAX 100 
 
 typedef struct {
@@ -15,4 +15,4 @@ void inverteLista(Lista *l);
 
 void exibeLista(Lista l);
 
-#endif
+

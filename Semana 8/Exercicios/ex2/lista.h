@@ -1,6 +1,6 @@
 #ifndef LISTA_H
 #define LISTA_H
-
+#endif
 #define MAX_FUNCIONARIOS 50
 #define MAX_NOME 100
 #define MAX_VEICULO 50
@@ -11,13 +11,13 @@ typedef struct {
     char veiculo[MAX_VEICULO];
 } Funcionario;
 
-typedef struct {
+typedef struct lista{
     Funcionario funcionarios[MAX_FUNCIONARIOS];
-    int qtd;
+    int prox;
 } ListaFuncionarios;
 
-void inicializaLista(ListaFuncionarios *lista);
+ListaFuncionarios* criaLista();
 int adicionaFuncionario(ListaFuncionarios *lista, Funcionario f);
 void imprimeLista(ListaFuncionarios lista);
 
-#endif
+

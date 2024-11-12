@@ -3,7 +3,7 @@
 
 void imprimeConjunto(Conjunto c) {
     printf("{ ");
-    for (int i = 0; i < c.qtd; i++) {
+    for (int i = 0; i < c.prox; i++) {
         printf("%d ", c.elementos[i]);
     }
     printf("}\n");

@@ -1,4 +1,3 @@
-// main.c
 #include <stdio.h>
 #include <stdlib.h>
 #include "lista.h"
@@ -10,13 +9,13 @@ int comparaFuncionarios(const void *a, const void *b) {
 }
 
 void ordenaLista(ListaFuncionarios *lista) {
-    qsort(lista->funcionarios, lista->qtd, sizeof(Funcionario), comparaFuncionarios);
+    qsort(lista->funcionarios, lista->prox, sizeof(Funcionario), comparaFuncionarios);
 }
 
 int main() {
     ListaFuncionarios listaA, listaB;
-    inicializaLista(&listaA);
-    inicializaLista(&listaB);
+    criaLista(&listaA);
+    criaLista(&listaB);
 
     // Adicionando alguns funcionários a listaA (exemplo)
     Funcionario f1 = {"João", "12345678901", "Carro"};
