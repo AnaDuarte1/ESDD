@@ -18,7 +18,6 @@ int main(){
         printf("Escolha uma opção: ");
         scanf("%d", &opcao);
 
-        // Realizar a operação escolhida
         switch(opcao) {
             case 1:
                 printf("\nExibindo a Taxa de Ocupação das Salas Teóricas:\n");
@@ -34,7 +33,7 @@ int main(){
                 break;
             case 4:
                 printf("\nExibindo Todos os Espaços Físicos Ordenados pela Capacidade Máxima:\n");
-                espacosFisicosT(espacosF);  
+                espacosFisicosT(espacosF); 
                 break;
             case 5:
                 printf("\nSaindo...\n");
