@@ -3,7 +3,7 @@
 #include "listaS.h"
 
 Lista criaLista() {
-    Lista lista = (Lista)malloc(sizeof(ListaSequencial));  
+    Lista lista = malloc(sizeof(ListaSequencial));  
     if (lista != NULL) {
         lista->tamanho = 0;  
     return lista;
@@ -24,10 +24,10 @@ int verificaOrdenada(Lista lista) {
 
     for (int i = 0; i < lista->tamanho - 1; i++) {
         if (lista->itens[i] > lista->itens[i + 1]) {
-            crescente = 0;  // Se encontrar um valor maior que o próximo, não está crescente
+            crescente = 0;  
         }
         if (lista->itens[i] < lista->itens[i + 1]) {
-            decrescente = 0;  // Se encontrar um valor menor que o próximo, não está decrescente
+            decrescente = 0;  
         }
     }
 
@@ -38,7 +38,6 @@ int verificaOrdenada(Lista lista) {
     return 0;  // A lista não está ordenada
 }
 
-// Função para imprimir os elementos da lista
 void imprimeLista(Lista lista) {
     if (lista->tamanho == 0) {
         printf("Lista vazia.\n");

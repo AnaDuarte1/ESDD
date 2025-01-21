@@ -1,26 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "listaS.h"
+#include "ListaS.h"
 
 int main() {
-    Lista lista = criaLista();  
+    Lista* l1 = criaLista();  
+    Lista* l2 = criaLista();
+    int numE, valor;
 
-    insereElemento(lista, 10);
-    insereElemento(lista, 20);
-    insereElemento(lista, 30);
-    insereElemento(lista, 25);
+    printf("Quantos elementos você deseja inserir na lista L1? ");
+    scanf("%d", &numE);
 
-    printf("Lista: ");
-    imprimeLista(lista);
-
-    // Verificando se a lista está ordenada
-    if (verificaOrdenada(lista)) {
-        printf("A lista está ordenada.\n");
-    } else {
-        printf("A lista não está ordenada.\n");
+    for (int i = 0; i < numE; i++) {
+        printf("Digite o %dº elemento: ", i + 1);
+        scanf("%d", &valor);
+        insereOrdenadoDes(l1, valor);
     }
 
-    free(lista);
+    eliminarElementos(l1, l2);
+
+    printf("\nLista 1: \n");
+    imprimeLista(l1);
+
+
+    printf("\nLista 2: \n");
+    imprimeLista(l2);
+
+
+    free(l1);
+    free(l2);
 
     return 0;
 }

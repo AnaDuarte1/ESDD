@@ -1,22 +1,22 @@
 #ifndef LISTASEQUENCIAL_H_INCLUDED
 #define LISTASEQUENCIAL_H_INCLUDED
-#endif 
-
+#endif
 #define MAX 100
 
 typedef struct {
     int itens[MAX];  
     int tamanho;     
-} Lista1;
+} Lista;
 
-typedef struct {
-    int itens[MAX];  
-    int tamanho;     
-} Lista2;
+typedef Lista* l1;
+typedef Lista* l2;
 
-typedef Lista1* Lista;
+Lista* criaLista();
 
-Lista criaLista(); 
-int insereElemento(Lista lista, int valor);  
-int verificaOrdenada(Lista lista);       
-void imprimeLista(Lista lista);
+void insereOrdenadoDes(Lista* lista, int valor);
+
+void eliminarElementos(Lista* l1, Lista* l2);
+
+void imprimeLista(Lista* lista);
+
+ 
